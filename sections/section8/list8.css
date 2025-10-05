@@ -1,0 +1,188 @@
+/* cards.css - Styles for Nootropics List Page */
+
+/* Wrapper with wallpaper */
+.list-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('images/neuro-wallpaper.jpg') center/cover no-repeat;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section header */
+.nootropic-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: rgba(30,30,30,0.85);
+  border-bottom: 1px solid #333;
+}
+.nootropic-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.nootropic-header p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Grid layout: responsive columns */
+.nootropics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  flex: 1;
+  background-color: rgba(18,18,18,0.8);
+}
+
+/* Individual card styling */
+.nootropic-card {
+  background: linear-gradient(145deg, #1f1f1f, #111111);
+  border: 2px solid #333;
+  border-radius: 16px;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.nootropic-card:hover {
+  transform: translateY(-6px);
+  border-color: #00ffcc;
+}
+
+/* Star badge */
+.card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #333;
+  padding: 4px 6px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+/* Titles and text */
+.nootropic-card h2 {
+  font-size: 1.2rem;
+  margin: 1.2rem 0 0.6rem;
+  color: #00ffcc;
+}
+.nootropic-card p {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin: 0.3rem 0;
+}
+
+/* Power level */
+.power-level {
+  margin: 0.75rem 0;
+  font-weight: bold;
+}
+.power-level span {
+  margin-left: 0.5rem;
+}
+
+/* Read More button */
+.read-more-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 8px 12px;
+  background-color: #00b386;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.read-more-button:hover {
+  background-color: #009973;
+}
+/* Next Section Button */
+.next-section-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00b386;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+.next-section-button:hover {
+  background-color: #009973;
+  transform: scale(1.05);
+}
+
+/* Close the first media query */
+@media (max-width: 480px) {
+  .next-section-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}  /* ← Make sure this brace is here! */
+
+/* Back to Home (dic) Button */
+.dic {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #00b386;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dic:hover {
+  background-color: #009973;
+  transform: scale(1.05);
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 480px) {
+  .dic {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Previous Section Button */
+.prev-section-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #00b386;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.prev-section-button:hover {
+  background-color: #009973;
+  transform: scale(1.05);
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 480px) {
+  .prev-section-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+
